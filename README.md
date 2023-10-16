@@ -3,7 +3,7 @@ Forked from [git-chglog/git-chglog](https://github.com/git-chglog/git-chglog)
 Added `options.issue_url` to the config file to allow for custom issue urls.
 
 ``` shell
-go install github.com/se1phine/git-chglog@latest
+go install -v github.com/se1phine/git-chglog/cmd/git-chglog@v0.1.0
 ```
 
 ---
