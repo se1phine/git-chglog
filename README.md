@@ -1,3 +1,13 @@
+Forked from [git-chglog/git-chglog](https://github.com/git-chglog/git-chglog)
+
+Added `options.issue_url` to the config file to allow for custom issue urls.
+
+``` shell
+go install github.com/se1phine/git-chglog@latest
+```
+
+---
+
 # git-chglog
 
 ![git-chglog](https://raw.githubusercontent.com/git-chglog/artwork/master/repo-banner%402x.png)
@@ -275,6 +285,7 @@ info:
   repository_url: https://github.com/git-chglog/git-chglog
 
 options:
+  issue_url: ""
   tag_filter_pattern: '^v'
   sort: "date"
 
@@ -360,6 +371,14 @@ so it is recommended to specify it.
 ### `options`
 
 Options used to process commits.
+
+#### `options.issue_url`
+
+Options for custom issue urls.
+
+| Required | Type   | Default | Description                                             |
+|:---------|:-------|:--------|:--------------------------------------------------------|
+| N        | String | none    | `http://host/path-to-issue/%s` replace "%s" to issue id |
 
 #### `options.sort`
 

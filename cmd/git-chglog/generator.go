@@ -3,7 +3,7 @@ package main
 import (
 	"io"
 
-	chglog "github.com/git-chglog/git-chglog"
+	chglog "github.com/se1phine/git-chglog"
 )
 
 // Generator ...

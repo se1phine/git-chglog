@@ -6,7 +6,7 @@ import (
 
 	"github.com/imdario/mergo"
 
-	chglog "github.com/git-chglog/git-chglog"
+	chglog "github.com/se1phine/git-chglog"
 )
 
 // Info ...
@@ -77,6 +77,7 @@ type Options struct {
 	CommitGroups     CommitGroupOptions `yaml:"commit_groups"`
 	Header           PatternOptions     `yaml:"header"`
 	Issues           IssueOptions       `yaml:"issues"`
+	IssueUrl         string             `yaml:"issue_url"`
 	Refs             RefOptions         `yaml:"refs"`
 	Merges           PatternOptions     `yaml:"merges"`
 	Reverts          PatternOptions     `yaml:"reverts"`
@@ -320,6 +321,7 @@ func (config *Config) Convert(ctx *CLIContext) *chglog.Config {
 			HeaderPattern:               opts.Header.Pattern,
 			HeaderPatternMaps:           opts.Header.PatternMaps,
 			IssuePrefix:                 opts.Issues.Prefix,
+			IssueUrl:                    opts.IssueUrl,
 			RefActions:                  opts.Refs.Actions,
 			MergePattern:                opts.Merges.Pattern,
 			MergePatternMaps:            opts.Merges.PatternMaps,

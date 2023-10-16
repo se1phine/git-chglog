@@ -61,7 +61,11 @@ func (p *GitHubProcessor) addLinks(input string) string {
 	input = p.reMention.ReplaceAllString(input, "[@$1]("+p.Host+"/$1)")
 
 	// issues
-	input = p.reIssue.ReplaceAllString(input, "[$1$2]("+repoURL+"/issues/$2)")
+	if p.config.Options.IssueUrl == "" {
+		input = p.reIssue.ReplaceAllString(input, "[$1$2]("+repoURL+"/issues/$2)")
+	} else {
+		input = p.reIssue.ReplaceAllString(input, "[$1$2]("+strings.Replace(p.config.Options.IssueUrl, "%s", "$2", -1)+")")
+	}
 
 	return input
 }

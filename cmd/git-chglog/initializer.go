@@ -6,7 +6,7 @@ import (
 
 	"github.com/fatih/color"
 
-	chglog "github.com/git-chglog/git-chglog"
+	chglog "github.com/se1phine/git-chglog"
 )
 
 // Initializer ...

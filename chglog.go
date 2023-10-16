@@ -32,6 +32,7 @@ type Options struct {
 	HeaderPattern               string              // A regular expression to use for parsing the commit header
 	HeaderPatternMaps           []string            // A rule for mapping the result of `HeaderPattern` to the property of `Commit`
 	IssuePrefix                 []string            // Prefix used for issues (e.g. `#`, `gh-`)
+	IssueUrl                    string              // URL used for issues
 	RefActions                  []string            // Word list of `Ref.Action`
 	MergePattern                string              // A regular expression to use for parsing the merge commit
 	MergePatternMaps            []string            // Similar to `HeaderPatternMaps`
@@ -44,6 +45,7 @@ type Options struct {
 	JiraTypeMaps                map[string]string
 	JiraIssueDescriptionPattern string
 	Paths                       []string // Path filter
+
 }
 
 // Info is metadata related to CHANGELOG
